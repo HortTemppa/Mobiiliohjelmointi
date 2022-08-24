@@ -27,11 +27,13 @@ export default function App() {
   return (
     <View style={styles.container}>
       <TextInput
+        style={styles.input}
         keyboardType="numeric"
         onChange={handleFirstChange}
         value={firstNumber}
       />
       <TextInput
+        style={styles.input}
         keyboardType="numeric"
         onChange={handleSecondChange}
         value={secondNumber}
