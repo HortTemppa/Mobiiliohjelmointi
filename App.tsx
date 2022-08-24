@@ -26,6 +26,7 @@ export default function App() {
 
   return (
     <View style={styles.container}>
+      <div>{result}</div>
       <TextInput
         style={styles.input}
         keyboardType="numeric"
@@ -38,8 +39,10 @@ export default function App() {
         onChange={handleSecondChange}
         value={secondNumber}
       />
-      <Button onPress={addNumbers} title="+"></Button>
-      <Button onPress={subtractNumbers} title="-"></Button>
+      <View style={styles.buttonContainer}>
+        <Button onPress={addNumbers} title="+"></Button>
+        <Button onPress={subtractNumbers} title="-"></Button>
+      </View>
     </View>
   );
 }
@@ -52,6 +55,17 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   input: {
-    height: 60,
+    textAlign: "center",
+    height: 40,
+    width: 180,
+    borderColor: "black",
+    borderWidth: 1,
+    marginBottom: 10,
+  },
+  buttonContainer: {
+    width: 90,
+    flexDirection: "row",
+    alignItems: "flex-start",
+    justifyContent: "space-between",
   },
 });
