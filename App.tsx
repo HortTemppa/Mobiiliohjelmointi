@@ -30,12 +30,12 @@ export default function App() {
         keyboardType="numeric"
         onChange={handleFirstChange}
         value={firstNumber}
-      ></TextInput>
+      />
       <TextInput
         keyboardType="numeric"
         onChange={handleSecondChange}
         value={secondNumber}
-      ></TextInput>
+      />
       <Button onPress={addNumbers} title="+"></Button>
       <Button onPress={subtractNumbers} title="-"></Button>
     </View>
