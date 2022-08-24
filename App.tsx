@@ -5,15 +5,15 @@ import { StyleSheet, TextInput, View, Button } from "react-native";
 export default function App() {
   const [result, setResult] = useState();
 
-  const [firstNumber, setFirstNumber] = useState(0);
-  const [secondNumber, setSecondNumber] = useState(0);
+  const [firstNumber, setFirstNumber] = useState();
+  const [secondNumber, setSecondNumber] = useState();
 
   const addNumbers = (): void => {
-    setResult(firstNumber + secondNumber);
+    setResult(parseInt(firstNumber) + parseInt(secondNumber));
   };
 
   const subtractNumbers = (): void => {
-    setResult(firstNumber - secondNumber);
+    setResult(parseInt(firstNumber) - parseInt(secondNumber));
   };
 
   const handleFirstChange = (e): void => {
